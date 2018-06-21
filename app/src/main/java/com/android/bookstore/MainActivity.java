@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             // In the while loop below, iterate through the rows of the cursor and display
             // the information from each column in the table layout.
-            bookCountView.setText(R.string.book_table_contains + cursor.getCount() + R.string.books);
+            bookCountView.setText(getString(R.string.book_table_contains) + " " + cursor.getCount() + " " + getString(R.string.books));
 
             int nameColumnIndex = cursor.getColumnIndex(BookStoreEntry.COLUMN_PRODUCT_NAME);
             int priceColumnIndex = cursor.getColumnIndex(BookStoreEntry.COLUMN_PRICE);
