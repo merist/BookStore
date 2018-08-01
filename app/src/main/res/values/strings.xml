@@ -1,11 +1,36 @@
 <resources>
     <string name="app_name">BookStore</string>
-    <string name="insert">Insert book</string>
-    <string name="book_title">Title</string>
-    <string name="book_price">Price</string>
-    <string name="book_quantity">Quantity</string>
+    <string name="add_product">Add</string>
+    <string name="product_name">Product name</string>
+    <string name="product_price">Price</string>
+    <string name="product_quantity">Quantity</string>
     <string name="supplier_name">Supplier name</string>
     <string name="supplier_phone">Supplier phone</string>
-    <string name="book_table_contains">The book table contains </string>
-    <string name="books">books.</string>
+    <string name="title_activity_editor">EditorActivity</string>
+    <string name="delete_all_entries">Delete all entries</string>
+    <string name="delete_button">Delete</string>
+    <string name="save">Save</string>
+    <string name="empty_inventory_title">Inventory is empty</string>
+    <string name="empty_inventory_instructions">Click the \"Insert book\" button to add a new book</string>
+    <string name="title_add_book">Add new book</string>
+    <string name="title_edit_book">Edit book</string>
+    <!-- Empty field validation -->
+    <string name="name_cannot_be_empty">Name cannot be empty</string>
+    <string name="price_cannot_be_empty">Price cannot be empty</string>
+    <string name="supplier_name_cannot_be_empty">Supplier name cannot be empty</string>
+    <string name="supplier_phone_number_cannot_be_empty">Supplier phone number cannot be empty</string>
+    <!-- Messages for the CRUD operations -->
+    <string name="insert_book_successfully">Book was saved successfully</string>
+    <string name="insert_book_failed">Saving book failed</string>
+    <string name="update_book_successfully">Book was updated successfully</string>
+    <string name="update_book_failed">Updating book failed</string>
+    <string name="delete_book_successfully">Book was deleted successfully</string>
+    <string name="delete_book_failed">Deleting book failed</string>
+
+    <string name="error_increase_quantity">Error while increasing quantity.</string>
+    <string name="quantity_less_than_zero">The book quantity can not be less than 0</string>
+    <string name="sell_product">Sell</string>
+    <string name="order">Order</string>
+    <string name="not_available_product">The book is not available in the store. Please contact the supplier.</string>
+
 </resources>

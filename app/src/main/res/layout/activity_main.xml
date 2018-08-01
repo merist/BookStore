@@ -1,44 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <LinearLayout
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="com.android.bookstore.MainActivity">
+        android:padding="@dimen/margin10"
+        tools:context=".MainActivity">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="280dp"
-            android:src="@drawable/books"
-            android:textColor="@color/colorBlack" />
-
-        <TextView
-            android:id="@+id/view_books"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:textColor="@color/colorBlack" />
-
-        <TableLayout
-            android:id="@+id/book_table"
+        <ListView
+            android:id="@+id/list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/margin10"
-            android:stretchColumns="*">
-        </TableLayout>
+            android:layout_marginLeft="@dimen/margin10">
+        </ListView>
 
-        <Button
-            android:id="@+id/insert_book"
+        <!-- Empty view for the list -->
+        <RelativeLayout
+            android:id="@+id/empty_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:background="@color/colorGreen"
-            android:padding="@dimen/margin10"
-            android:text="@string/insert"
-            android:textColor="@color/colorWhite" />
-    </LinearLayout>
-</ScrollView>
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/empty_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="16dp"
+                android:text="@string/empty_inventory_title"
+                android:textAppearance="?android:textAppearanceMedium"/>
+
+            <TextView
+                android:id="@+id/empty_subtitle_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/empty_title_text"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="8dp"
+                android:text="@string/empty_inventory_instructions"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="#A2AAB0"/>
+        </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/add_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_input_add"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
